@@ -1,7 +1,9 @@
 Package: fars
 Type: Package
+Imports: readr, dplyr, tidyr, maps, graphics
 Title: Handle fars file
-Version: 0.9.0
+Version: 1.0.0
+Date: 2017-07-09
 Author: Tarso Rodriguez
 Maintainer: Tarso Rodriguez <tarso.rodriguez@gmail.com>
 Description: It gives statistics about accidents obtained from fars files.
@@ -11,3 +13,4 @@ LazyData: true
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/TarsoRodriguez/fars
