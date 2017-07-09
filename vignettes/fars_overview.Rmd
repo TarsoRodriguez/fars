@@ -1,0 +1,51 @@
+---
+title: "FARS Functions Overview"
+author: "Tarso Rodriguez"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+*FARS* package is a cluster of functions that can handle information about [Fatality Analysis Reporting System](https://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS)) (FARS) which is provided by US National Highway Traffic Safety Administration through a file. Each file has the information about a specific year.
+
+Below is a list of all functions with its short description.
+
+```{r, echo=FALSE, results='hide'}
+source("../R/fars_functions.R")
+```
+
+**fars_read**: Loads a specific fars file to a data frame
+```{r ReadFile, cache=TRUE}
+df_fars_file <- fars_read("../data/accident_2013.csv.bz2")
+head(df_fars_file)
+```
+
+**make_filename**: Builds a string with the name of file that will be loaded based on the year given by the user
+```{r CreateFileName, cache=TRUE}
+filename <- make_filename(2013)
+filename
+```
+
+**fars_read_years**: Creates a list of all months in the files
+```{r ListMonths, cache=TRUE}
+setwd("../data/")
+list_of_months <- fars_read_years(c(2013, 2014, 2015))
+head(list_of_months)
+```
+
+**fars_summarize_years**: Summarizes the number of occurrencies in each month by year
+```{r OccurrencySummary, cache=TRUE}
+setwd("../data/")
+df_occurrency_summary <- fars_summarize_years(c(2013, 2014, 2015))
+head(df_occurrency_summary)
+```
+
+**fars_map_state**: Plots a map of a state showing the places of each accident that happend in a specific year
+```{r Map, cache=TRUE, fig.align='center', fig.height=4, fig.width=4}
+setwd("../data/")
+fars_map_state(1, 2013)
+```
+
