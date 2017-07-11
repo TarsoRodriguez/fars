@@ -12,7 +12,7 @@
 #'    In order to load the file, it should be in the working directory.
 #'
 #' @examples
-#' \code{fars_read("data/accident_2013.csv.bz2")}
+#' fars_read("data/accident_2013.csv.bz2")
 #'
 #' @export
 fars_read <- function(filename) {
@@ -33,7 +33,7 @@ fars_read <- function(filename) {
 #' @return This function returns the file name that should be loaded.
 #'
 #' @examples
-#' \code{make_filename(2013)}
+#' make_filename(2013)
 #'
 #' @export
 make_filename <- function(year) {
@@ -56,9 +56,9 @@ make_filename <- function(year) {
 #'    In case the year required doesn't have a correspondent file it will generate a warning.
 #'
 #' @examples
-#' \code{fars_read_years(c(2013, 2014, 2015))}
-#' \code{fars_read_years(c(2014))}
-#' \code{fars_read_years(c(2013, 2015))}
+#' fars_read_years(c(2013, 2014, 2015))
+#' fars_read_years(c(2014))
+#' fars_read_years(c(2013, 2015))
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -90,9 +90,9 @@ fars_read_years <- function(years) {
 #'    In case the year required doesn't have a correspondent file it will generate a warning.
 #'
 #' @examples
-#' \code{fars_summarize_years(c(2013, 2014, 2015))}
-#' \code{fars_summarize_years(c(2014))}
-#' \code{fars_summarize_years(c(2013, 2015))}
+#' fars_summarize_years(c(2013, 2014, 2015))
+#' fars_summarize_years(c(2014))
+#' fars_summarize_years(c(2013, 2015))
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -129,9 +129,9 @@ fars_summarize_years <- function(years) {
 #'    If there is no accidents to plot for state ID informed it will print a message to inform that.
 #'
 #' @examples
-#' \code{fars_map_state(1, 2013)}
-#' \code{fars_map_state(33, 2014)}
-#' \code{fars_map_state(40, 2015)}
+#' fars_map_state(1, 2013)
+#' fars_map_state(33, 2014)
+#' fars_map_state(40, 2015)
 #'
 #' @export
 fars_map_state <- function(state.num, year) {
