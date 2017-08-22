@@ -16,6 +16,6 @@ This function returns the file name that should be loaded.
 This function builds a string with the name of file that will be loaded based on the year of the required information.
 }
 \examples{
-\\code{make_filename(2013)}
+make_filename(2013)
 
 }

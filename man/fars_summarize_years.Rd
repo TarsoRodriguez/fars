@@ -23,8 +23,8 @@ This function uses bind_rows, group_by and summarize functions from dplyr packag
    In case the year required doesn't have a correspondent file it will generate a warning.
 }
 \examples{
-\\code{fars_summarize_years(c(2013, 2014, 2015))}
-\\code{fars_summarize_years(c(2014))}
-\\code{fars_summarize_years(c(2013, 2015))}
+fars_summarize_years(c(2013, 2014, 2015))
+fars_summarize_years(c(2014))
+fars_summarize_years(c(2013, 2015))
 
 }

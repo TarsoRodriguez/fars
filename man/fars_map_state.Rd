@@ -35,8 +35,8 @@ This function uses filter functions from dplyr package, map function from maps p
    If there is no accidents to plot for state ID informed it will print a message to inform that.
 }
 \examples{
-\\code{fars_map_state(1, 2013)}
-\\code{fars_map_state(33, 2014)}
-\\code{fars_map_state(40, 2015)}
+fars_map_state(1, 2013)
+fars_map_state(33, 2014)
+fars_map_state(40, 2015)
 
 }
