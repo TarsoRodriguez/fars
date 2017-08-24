@@ -19,7 +19,7 @@ source("../R/fars_functions.R")
 
 **fars_read**: Loads a specific fars file to a data frame
 ```{r ReadFile, cache=TRUE}
-df_fars_file <- fars_read("../data/accident_2013.csv.bz2")
+df_fars_file <- fars_read("../inst/extdata/accident_2013.csv.bz2")
 head(df_fars_file)
 ```
 
@@ -31,21 +31,21 @@ filename
 
 **fars_read_years**: Creates a list of all months in the files
 ```{r ListMonths, cache=TRUE}
-setwd("../data/")
+setwd("../inst/extdata/")
 list_of_months <- fars_read_years(c(2013, 2014, 2015))
 head(list_of_months)
 ```
 
 **fars_summarize_years**: Summarizes the number of occurrencies in each month by year
 ```{r OccurrencySummary, cache=TRUE}
-setwd("../data/")
+setwd("../inst/extdata/")
 df_occurrency_summary <- fars_summarize_years(c(2013, 2014, 2015))
 head(df_occurrency_summary)
 ```
 
 **fars_map_state**: Plots a map of a state showing the places of each accident that happend in a specific year
 ```{r Map, cache=TRUE, fig.align='center', fig.height=4, fig.width=4}
-setwd("../data/")
+setwd("../inst/extdata/")
 fars_map_state(1, 2013)
 ```
 

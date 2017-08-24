@@ -1,3 +1,5 @@
 base
 dplyr
 bindrcpp
+tidyr
+maps
