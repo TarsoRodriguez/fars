@@ -31,21 +31,20 @@ filename
 
 **fars_read_years**: Creates a list of all months in the files
 ```{r ListMonths, cache=TRUE}
-setwd("../inst/extdata/")
+setwd(system.file("extdata", package = "fars"))
 list_of_months <- fars_read_years(c(2013, 2014, 2015))
 head(list_of_months)
 ```
 
 **fars_summarize_years**: Summarizes the number of occurrencies in each month by year
 ```{r OccurrencySummary, cache=TRUE}
-setwd("../inst/extdata/")
+setwd(system.file("extdata", package = "fars"))
 df_occurrency_summary <- fars_summarize_years(c(2013, 2014, 2015))
 head(df_occurrency_summary)
 ```
 
 **fars_map_state**: Plots a map of a state showing the places of each accident that happend in a specific year
 ```{r Map, cache=TRUE, fig.align='center', fig.height=4, fig.width=4}
-setwd("../inst/extdata/")
+setwd(system.file("extdata", package = "fars"))
 fars_map_state(1, 2013)
 ```
-
