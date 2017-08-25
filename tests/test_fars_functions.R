@@ -1,9 +1,5 @@
 library(testthat)
-
-source("./R/fars_functions.R")
-
-##setting working directory
-#setwd("./data/")
+library(fars)
 
 ## Testing fars_read function
 test_that("fars_read - Load file", {
