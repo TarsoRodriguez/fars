@@ -3,16 +3,16 @@ library(testthat)
 source("./R/fars_functions.R")
 
 ##setting working directory
-setwd("./data/")
+#setwd("./data/")
 
 ## Testing fars_read function
 test_that("fars_read - Load file", {
-  df_fars_file <- fars_read("./accident_2013.csv.bz2")
+  df_fars_file <- fars_read("./inst/extdata/accident_2013.csv.bz2")
   expect_that(df_fars_file, is_a(c("tbl_df", "tbl", "data.frame")))
   })
 
 test_that("fars_read - Error Message", {
-  throws_error(fars_read("./accidents_2013.csv.bz2"), "file ./accidents_2013.csv.bz2 does not exist")
+  throws_error(fars_read("./inst/extdata/accident_2013.csv.bz2"), "file ./inst/extdata/accidents_2013.csv.bz2 does not exist")
 })
 
 ## Testing make_filename function
