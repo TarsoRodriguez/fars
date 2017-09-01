@@ -22,6 +22,8 @@ This function uses read_csv function from readr package.
    In order to load the file, it should be in the working directory.
 }
 \examples{
+\dontrun{
 fars_read("data/accident_2013.csv.bz2")
+}
 
 }

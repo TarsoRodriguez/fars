@@ -18,10 +18,11 @@
 #'
 #' @export
 fars_read <- function(filename) {
-        if(!file.exists(filename))
+        full_path <- paste0(system.file("extdata", package = "fars"), "/", filename)
+        if(!file.exists(full_path))
                 stop("file '", filename, "' does not exist")
         data <- suppressMessages({
-                readr::read_csv(filename, progress = FALSE)
+                readr::read_csv(full_path, progress = FALSE)
         })
         dplyr::tbl_df(data)
 }
