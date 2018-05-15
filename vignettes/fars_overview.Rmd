@@ -15,6 +15,7 @@ Below is a list of all functions with its short description.
 
 ```{r, echo=FALSE, results='hide'}
 source("../R/fars_functions.R")
+library(dplyr)
 ```
 
 **fars_read**: Loads a specific fars file to a data frame
