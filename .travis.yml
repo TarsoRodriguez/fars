@@ -2,4 +2,8 @@
 
 language: r
 cache: packages
-sudo: false
+sudo: required
+
+before_install:
+- sudp apt-get install -y libmagickcore-dev
+- sudp apt-get install -y libmagickwand-dev
